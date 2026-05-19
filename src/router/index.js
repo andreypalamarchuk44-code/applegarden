@@ -12,7 +12,6 @@ const routes = [
   { path: '/contacts', component: Contacts }
 ]
 
-
 const router = createRouter({
   history: createWebHistory(),
   routes
