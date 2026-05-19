@@ -43,7 +43,7 @@ export default {
           description: 'Солодкі жовті яблука',
           price: 45,
           oldPrice: 60,
-          image: '/img/apple1.png'
+          image: '/img/apple1.jpg'
         },
 
         {
@@ -52,7 +52,7 @@ export default {
           description: 'солодкі з легкою кислинкою',
           price: 55,
           oldPrice: 70,
-          image: '/img/apple2.png'
+          image: '/img/apple2.jpg'
         },
 
         {
@@ -61,7 +61,7 @@ export default {
           description: 'Кисло-солодкий смак',
           price: 50,
           oldPrice: 65,
-          image: '/img/apple3.png'
+          image: '/img/apple3.jpg'
         },
             {
           id: 4,
@@ -69,7 +69,7 @@ export default {
           description: 'Дуже солодкі',
           price: 50,
           oldPrice: 65,
-          image: '/img/apple4.png'
+          image: '/img/apple4.jpg'
         },
             {
           id: 5,
@@ -77,7 +77,7 @@ export default {
           description: 'Кисло-солодкий смак',
           price: 50,
           oldPrice: 65,
-          image: '/img/apple5.png'
+          image: '/img/apple5.jpg'
         },    
         {
           id: 6,
@@ -85,7 +85,7 @@ export default {
           description: 'Кисло-солодкий смак',
           price: 50,
           oldPrice: 65,
-          image: '/img/apple6.png'
+          image: '/img/apple6.jpg'
         
       },
       {
@@ -94,7 +94,7 @@ export default {
           description: 'Cолодкі з легкою кислинкою',
           price: 50,
           oldPrice: 65,
-          image: '/img/apple7.png'
+          image: '/img/apple7.jpg'
          
         
       },
@@ -104,7 +104,7 @@ export default {
           description: 'Kислі та дуже ароматні',
           price: 50,
           oldPrice: 65,
-          image: '/img/apple8.png'
+          image: '/img/apple8.jpg'
          
         
         
