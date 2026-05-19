@@ -89,7 +89,7 @@ export default {
 
       slides: [
         '/img/apple8.jpg',
-        '/img/apple8.jpg',
+        '/img/apple9.jpg',
         '/img/apple12.jpg',
         '/img/apple13.jpg',
         '/img/apple14.jpg',
