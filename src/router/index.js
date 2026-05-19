@@ -6,28 +6,12 @@ import About from '../pages/About.vue'
 import Contacts from '@/pages/Contacts.vue'
 
 const routes = [
-  {
-    path: '/',
-    component: Home
-  },
-
-  {
-    path: '/catalog',
-    component: Catalog
-  },
-    {
-    path: '/about',
-    name: 'about',
-    component: About
-  },
-  {
-    path: '/contacts',
-    component: Contacts
-  },
-  
-
-
+  { path: '/', component: Home },
+  { path: '/catalog', component: Catalog },
+  { path: '/about', component: About },
+  { path: '/contacts', component: Contacts }
 ]
+
 
 const router = createRouter({
   history: createWebHistory(),
