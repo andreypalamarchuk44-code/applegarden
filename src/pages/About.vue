@@ -36,7 +36,7 @@
         </p>
       </div>
 
-      <img src="/img/tree.png" alt="apple">
+      <img src="/img/tree.jpg" alt="apple">
 
     </section>
 
