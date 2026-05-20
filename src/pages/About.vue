@@ -186,11 +186,7 @@ export default {
   box-shadow: 0 10px 40px rgba(32, 131, 29, 0.336);
 
   position: relative;
-  /* height: 80vh;
-  background-image: url('/img/garden.jpg');
-  background-size: cover;
-  background-position: center;
-  position: relative; */
+ 
 }
 
 .overlay {
@@ -209,13 +205,14 @@ export default {
 }
 
 .overlay h1 {
-  font-size: 70px;
+  font-size: clamp(36px, 8vw, 70px);
   margin-bottom: 20px;
 }
 
 .overlay p {
-  font-size: 22px;
+   font-size: clamp(16px, 3vw, 22px);
   max-width: 700px;
+  line-height: 1.6;
 }
 
 /* ABOUT */
@@ -249,9 +246,12 @@ export default {
 }
 
 .about-info img {
-  width: 500px;
+ width: 100%;
+  max-width: 500px;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+
+  display: block;
 }
 
 /* STATS */
@@ -311,11 +311,17 @@ export default {
 }
 
 .review {
-  width: 320px;
+   width: 100%;
+  max-width: 320px;
+
   background: #f7f7f7;
   padding: 30px;
   border-radius: 20px;
+
   box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+
+  box-sizing: border-box;
+
 }
 
 .review p {
@@ -360,14 +366,17 @@ export default {
 }
 
 .review-form button {
-  margin: 0 20px 20px;
-  width: calc(100% - 40px);
+  width: 100%;
   padding: 15px;
+
   border: none;
   border-radius: 12px;
+
   background: #FFC800;
+
   cursor: pointer;
   font-size: 16px;
+
   transition: 0.3s;
 }
 
@@ -409,12 +418,15 @@ export default {
 }
 
 
-/* ADAPTIVE */
+/* TABLET */
+@media (max-width: 900px) {
 
-@media(max-width: 900px) {
+  .hero {
+    min-height: 65vh;
+  }
 
   .overlay h1 {
-    font-size: 45px;
+    font-size: 48px;
   }
 
   .overlay p {
@@ -423,12 +435,122 @@ export default {
 
   .about-info {
     flex-direction: column;
+    padding: 70px 20px;
+    text-align: center;
   }
 
-  .about-info img {
+  .text h2 {
+    font-size: 38px;
+  }
+
+  .stats {
+    padding: 70px 20px;
+  }
+
+  .reviews {
+    padding: 70px 20px;
+  }
+
+  .reviews h2 {
+    font-size: 38px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .hero {
+    min-height: 55vh;
+    border-radius: 20px;
+  }
+
+  .overlay {
+    padding: 20px;
+  }
+
+  .overlay h1 {
+    font-size: 36px;
+  }
+
+  .overlay p {
+    font-size: 16px;
+  }
+
+  .text h2 {
+    font-size: 32px;
+  }
+
+  .text p {
+    font-size: 16px;
+  }
+
+  .card {
     width: 100%;
+    max-width: 280px;
   }
 
+  .card h2 {
+    font-size: 36px;
+  }
+
+  .reviews h2 {
+    font-size: 32px;
+  }
+
+  .review-form h3 {
+    font-size: 28px;
+  }
+
+  .back-btn {
+    width: 50px;
+    height: 50px;
+
+    top: 20px;
+    left: 20px;
+
+    font-size: 18px;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+
+  .about {
+    border-radius: 15px;
+  }
+
+  .hero {
+    min-height: 50vh;
+    border-radius: 15px;
+  }
+
+  .overlay h1 {
+    font-size: 30px;
+  }
+
+  .overlay p {
+    font-size: 15px;
+  }
+
+  .about-info,
+  .stats,
+  .reviews {
+    padding: 50px 15px;
+  }
+
+  .review {
+    padding: 20px;
+  }
+
+  .review-form {
+    gap: 15px;
+  }
+
+  .review-form input,
+  .review-form textarea {
+    padding: 12px;
+    font-size: 15px;
+  }
 }
 
 </style>

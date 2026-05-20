@@ -55,15 +55,18 @@ export default {
 
 <style lang="scss">
 .footer {
+  width: 100%;
   margin-top: 100px;
-  padding: 40px 0;
+  padding: 40px 20px;
   background: #1f1f1f;
   color: white;
   border-top: 4px solid #FFC800;
+    box-sizing: border-box;
+
 }
 
 .footer-content {
-  width: 90%;
+  width: 100%;
   max-width: 1300px;
   margin: 0 auto;
 
@@ -71,7 +74,9 @@ export default {
   align-items: center;
   justify-content: space-between;
   gap: 40px;
+
   flex-wrap: wrap;
+    box-sizing: border-box;
 }
 
 .footer-info {
@@ -80,13 +85,14 @@ export default {
   h2 {
     color: #FFC800;
     margin-bottom: 10px;
-    font-size: 32px;
+    font-size: clamp(28px, 4vw, 32px);
   }
 
   p {
-    font-size: 16px;
+    font-size: clamp(14px, 2vw, 16px);
     opacity: 0.8;
     font-family: "Montserrat", sans-serif;
+    line-height: 1.6;
   }
 }
 
@@ -145,6 +151,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+   flex-shrink: 0;
 
   &:hover {
     transform: translateY(-5px);
@@ -152,17 +159,63 @@ export default {
   }
 }
 
-@media(max-width: 768px) {
+
+/* Планшети */
+@media (max-width: 1024px) {
+  .footer-content {
+    gap: 30px;
+  }
+}
+
+/* Телефони */
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 15px;
+  }
+
   .footer-content {
     flex-direction: column;
     text-align: center;
+    gap: 25px;
   }
 
-  .footer-links {
-    flex-direction: column;
+  .footer-info {
+    max-width: 100%;
+  }
+
+  .socials {
     gap: 15px;
   }
+
+  .top-btn {
+    width: 55px;
+    height: 55px;
+    font-size: 20px;
+  }
 }
+
+/* Маленькі телефони */
+@media (max-width: 480px) {
+  .footer {
+    margin-top: 70px;
+    padding: 30px 10px;
+  }
+
+  .socials a {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+
+  .top-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+  }
+}
+
+
+
 
 
 

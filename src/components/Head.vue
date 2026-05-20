@@ -204,6 +204,8 @@ button {
   border-radius: 30px;
   box-shadow: 0 10px 40px rgba(122, 10, 10, 0.87);
   background: rgb(42, 49, 42);
+  
+
 }
 
 .slide img {
@@ -371,19 +373,40 @@ button {
 
 
 
-/* Адаптив */
+/* Ноутбуки */
+@media (max-width: 1024px) {
+  .slider {
+    width: 85%;
+  }
 
+  .slide img {
+    height: 450px;
+  }
+}
+
+/* Планшети */
 @media (max-width: 768px) {
+  .slider {
+    width: 90%;
+    margin: 50px auto;
+    border-radius: 20px;
+  }
 
   .slide img {
     height: 350px;
   }
+}
 
-  .prev,
-  .next {
-    width: 45px;
-    height: 45px;
-    font-size: 18px;
+/* Телефони */
+@media (max-width: 480px) {
+  .slider {
+    width: 95%;
+    margin: 40px auto;
+    border-radius: 15px;
+  }
+
+  .slide img {
+    height: 250px;
   }
 }
 </style>

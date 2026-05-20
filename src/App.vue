@@ -28,7 +28,11 @@ $additionColor: #FFC800;
 body {
   background: #f8f5ef;
   color: $textColor;
-  font-family: "Caprasimo", cursive;
+ font-family:
+    "Caprasimo",
+    "Montserrat",
+    Arial,
+    sans-serif;
   font-weight: 400;
   font-size: 1em;
   color: $textColor;
@@ -50,13 +54,19 @@ a {
     margin: 0 auto;
   }
    @media(max-width: 1500px) and  (min-width: 900px){
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
   }
    @media(max-width: 900px) {
-    width: 80%;
-    margin: 0 5%;
+    width: 95%;
+    margin: 0 15px;
   }
+  @media (max-width: 480px) {
+  .container {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
   
 }
 

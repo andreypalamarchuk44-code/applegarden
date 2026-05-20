@@ -104,7 +104,7 @@ export default {
           description: 'Kислі та дуже ароматні',
           price: 50,
           oldPrice: 65,
-          image: '/img/apple8.jpg'
+          image: '/img/apple16.jpg'
          
         
         
@@ -130,6 +130,10 @@ export default {
   width: 90%;
   max-width: 1300px;
   margin: 60px auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+  
+  
   .back-btn {
   width: 60px;
   height: 60px;
@@ -160,7 +164,7 @@ export default {
   h1 {
     text-align: center;
     margin-bottom: 50px;
-    font-size: 48px;
+    font-size: clamp(32px, 5vw, 48px);
   }
 }
 
@@ -174,6 +178,7 @@ export default {
   background: white;
   border-radius: 25px;
   overflow: hidden;
+
   box-shadow: 0 5px 20px rgba(0,0,0,0.08);
   transition: 0.3s;
 
@@ -182,19 +187,26 @@ export default {
   }
 
   img {
-    width: 97%;
+    width: 85%;
     height: 250px;
     object-fit: cover;
+
+
+    display: block;
    
   }
 
   h2 {
     padding: 20px 20px 10px;
+    font-size: clamp(22px, 3vw, 28px);
   }
 
   p {
     padding: 0 20px;
     font-family: "Montserrat", sans-serif;
+    line-height: 1.6;
+    font-size: clamp(14px, 2vw, 16px);
+
   }
 
   .price {
@@ -208,7 +220,7 @@ export default {
   .new-price {
     font-size: 28px;
     color: #78b900;
-    // font-weight: bold;
+ 
   }
 
   .old-price {
@@ -231,6 +243,63 @@ export default {
       background: #ffd83d;
     }
   }
-  
+  /* Планшети */
+@media (max-width: 768px) {
+  .catalog {
+    width: 95%;
+    margin: 40px auto;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .card {
+    img {
+      height: 220px;
+    }
+  }
+}
+
+/* Телефони */
+@media (max-width: 480px) {
+  .catalog {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .catalog .back-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+  }
+
+  .card {
+    border-radius: 18px;
+
+    img {
+      height: 200px;
+    }
+
+    h2 {
+      padding: 15px 15px 10px;
+    }
+
+    p {
+      padding: 0 15px;
+    }
+
+    .price {
+      padding: 15px;
+      gap: 10px;
+    }
+
+    button {
+      margin: 0 15px 15px;
+      width: calc(100% - 30px);
+    }
+  }
+}
 }
 </style>

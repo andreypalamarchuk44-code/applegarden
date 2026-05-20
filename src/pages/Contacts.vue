@@ -146,46 +146,6 @@ export default {
   font-family: sans-serif;
 }
 
-/* .hero {
-  height: 70vh;
-
-  background-image: url('/img/redapple.jpg');
-  background-size: cover;
-  background-position: center;
-
-  border-radius: 30px;
-  overflow: hidden;
-
-  position: relative;
-  margin-top: 20px;
-}
-
-.overlay {
-  width: 100%;
-  height: 100%;
-
-  background: rgba(0,0,0,0.45);
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  color: white;
-  text-align: center;
-
-  padding: 20px;
-}
-
-.overlay h1 {
-  font-size: 70px;
-  margin-bottom: 20px;
-  
-}
-
-.overlay p {
-  font-size: 22px;
-} */
 .hero {
   height: 70vh;
 
@@ -220,7 +180,8 @@ export default {
   position: relative;
   z-index: 2;
 
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
 
   padding: 50px;
 
@@ -235,19 +196,22 @@ export default {
   text-align: center;
 
   color: white;
+
+  box-sizing: border-box;
 }
 
 /* заголовок */
 .contact-card h1 {
-  font-size: 65px;
+  font-size: clamp(36px, 7vw, 65px);
   margin-bottom: 20px;
+  font-weight: 700;
 
   font-weight: 700;
 }
 
 /* текст */
 .contact-card p {
-  font-size: 22px;
+  font-size: clamp(16px, 3vw, 22px);
   line-height: 1.6;
 }
 
@@ -393,18 +357,140 @@ export default {
   color: white;
 }
 
-/* ADAPTIVE */
+/* TABLET */
+@media (max-width: 900px) {
 
-@media(max-width: 900px) {
-
-  .overlay h1 {
-    font-size: 45px;
+  .hero {
+    height: 60vh;
+    border-radius: 25px;
   }
 
-  .overlay p {
+  .contact-card {
+    padding: 40px 25px;
+  }
+
+  .contact-box {
+    padding: 70px 0;
+
+    flex-direction: column;
+  }
+
+  .info h2,
+  .form-box h2 {
+    font-size: 34px;
+  }
+
+  .item p {
+    font-size: 16px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .hero {
+    height: 50vh;
+    border-radius: 20px;
+  }
+
+  .contact-card {
+    width: 90%;
+    padding: 30px 20px;
+
+    border-radius: 20px;
+  }
+
+  .contact-card h1 {
+    font-size: 36px;
+  }
+
+  .contact-card p {
+    font-size: 16px;
+  }
+
+  .info,
+  .form-box {
+    min-width: 100%;
+    padding: 25px;
+  }
+
+  .info h2,
+  .form-box h2 {
+    font-size: 30px;
+  }
+
+  .item {
+    gap: 15px;
+  }
+
+  .item i {
+    width: 50px;
+    height: 50px;
+
     font-size: 18px;
   }
 
+  .back-btn {
+    width: 50px;
+    height: 50px;
+
+    top: 20px;
+    left: 20px;
+
+    font-size: 18px;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+
+  .hero {
+    height: 45vh;
+    margin-top: 10px;
+  }
+
+  .contact-card {
+    width: 95%;
+    padding: 25px 15px;
+  }
+
+  .contact-card h1 {
+    font-size: 30px;
+  }
+
+  .contact-card p {
+    font-size: 15px;
+  }
+
+  .contact-box {
+    padding: 50px 0;
+    gap: 25px;
+  }
+
+  .info,
+  .form-box {
+    padding: 20px;
+    border-radius: 18px;
+  }
+
+  .item {
+    align-items: flex-start;
+  }
+
+  .item p {
+    font-size: 15px;
+  }
+
+  .form-box input,
+  .form-box textarea {
+    padding: 14px;
+    font-size: 15px;
+  }
+
+  .form-box button {
+    padding: 14px;
+    font-size: 15px;
+  }
 }
 
 </style>
